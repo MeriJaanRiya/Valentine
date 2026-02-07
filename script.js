@@ -27,7 +27,7 @@ document.addEventListener("mousemove", e => {
 function powerUpYesButton() {
   if (!yesBtn) return;
 
-  yesPower += 0.01;
+  yesPower += 0.03;
 
   // Cap it so it doesn't break layout
   yesPower = Math.min(yesPower, 5);
@@ -120,11 +120,19 @@ function initializeButtons() {
       <h2 class ="celebrate-subtext"> I love you babygirl, and I am so excited for our first Valentines Day together! 😘 </h2>
       <h6 class="celebrate-subtext-small">PS : I knew you would say yes my love, and that is why I never even coded a no button in the first place 🤭</h6> 
       
-       <!-- TWO IMAGES SIDE BY SIDE -->
-      <div class="celebrate-photos">
-        <img src="https://i.imgur.com/KsTaYys.jpeg" alt="Photo 1" class="celebrate-photo">
-        <img src="https://via.placeholder.com/200x200.png?text=Photo+2" alt="Photo 2" class="celebrate-photo">
-      </div>
+   <div class="celebrate-photos">
+  <div class="celebrate-photo-wrapper">
+    <img src="https://i.imgur.com/KsTaYys.jpeg" alt="Photo 1" class="celebrate-photo">
+    <div class="celebrate-photo-caption">Here is my little Valentine Gift for you 💖</div>
+  </div>
+  
+  <div class="celebrate-photo-wrapper">
+    <img src="https://i.imgur.com/KsTaYys.jpeg" alt="Photo 2" class="celebrate-photo">
+    <div class="celebrate-photo-caption">Here is proof that this is my gift hehe </div>
+  </div>
+</div>
+
+
       
       <div id="hearts"></div>
       <div id="floating-bg"></div>
