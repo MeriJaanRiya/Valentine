@@ -128,7 +128,7 @@ function initializeButtons() {
   
   <div class="celebrate-photo-wrapper">
     <video src="https://github.com/MeriJaanRiya/Valentine/blob/main/091DAF53-206B-45DE-9505-86BC5DACF25F.mp4" alt="Photo 2" class="celebrate-photo">
-    <div class="celebrate-photo-caption">Here is proof that this is my gift hehe </div>
+    <div class="celebrate-photo-caption">Here is proof that this is my gift hehe 🤭</div>
   </div>
 </div>
 
