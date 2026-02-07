@@ -353,7 +353,7 @@ letter.addEventListener("click",()=>{
     const cardContainer = document.getElementById("card-container");
     cardContainer.innerHTML = `
       <div class="card">
-        <h1>Will you be my Valentine? 💕</h1>
+        <h1>Riya, Will you be my Valentine? 💕</h1>
         <div class="buttons-wrapper">
           <button id="yes">Yes 💖</button>
           <button id="no">No 😅</button>
