@@ -1,0 +1,356 @@
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #fff7f8);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #fff0f6;
+  padding: 50px 70px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+h1 {
+  color: #ff4d88;
+  margin-bottom: 25px;
+  font-size: 2em;
+  text-shadow: 1px 1px 3px rgba(255,77,136,0.3);
+}
+
+/* ===== BUTTONS ===== */
+.buttons-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+button {
+  padding: 10px 26px;
+  font-size: 18px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  line-height: 1.2;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(255,77,136,0.2);
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(255,77,136,0.35);
+}
+
+#yes {
+  background: #ff4d88;
+  color: white;
+  animation:
+  yesBounce 2s ease-in-out infinite,
+  yesWiggle 2s ease-in-out infinite,
+  yesPulse 1.5s ease-in-out infinite;
+  transition:
+    font-size 0.3s ease,
+    padding 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.3s ease;
+}
+
+.celebrate-text {
+  font-size: 5em;
+  color: #ff4d88;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #ff77aa,
+    0 0 10px #ff4d88,
+    0 0 15px #ff99cc,
+    0 0 20px #ff4d88,
+    0 0 25px #ff66aa;
+  animation: heartPop 1s ease-in-out infinite alternate;
+  margin: 0;
+}
+
+.celebrate-photos {
+  display: flex;
+  gap: 20px;              /* space between the two images */
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.celebrate-photo {
+  width: 400px;            /* adjust size as needed */
+  height: auto;
+  border-radius: 20px;     /* optional rounded corners */
+  box-shadow: 0 8px 20px rgba(255,77,136,0.4);
+  animation: photoPop 1s ease-in-out forwards;
+}
+
+@keyframes photoPop {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+.celebrate-subtext {
+  font-size: 2em;
+  color: #ff4d88;
+  text-shadow: 0 0 12px rgba(255,77,136,0.7);
+  margin-top: 20px;
+  font-style: italic;
+  transition: all 0.3s ease;
+}
+
+.celebrate-subtext-small {
+  font-size: 14px;       /* adjust to whatever size you like */
+  color: #ff4d88;        /* optional: match main theme color */
+  margin-top: 8px;       /* optional spacing */
+  font-weight: normal;   /* optional */
+}
+
+
+@keyframes heartPop {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(-2deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+
+@keyframes yesWiggleCrazy {
+  0%   { transform: rotate(0deg) translate(0, 0); }
+  10%  { transform: rotate(-3deg) translate(-2px, 1px); }
+  20%  { transform: rotate(3deg) translate(2px, -1px); }
+  30%  { transform: rotate(-4deg) translate(-3px, 2px); }
+  40%  { transform: rotate(4deg) translate(3px, -2px); }
+  50%  { transform: rotate(-2deg) translate(-1px, 1px); }
+  60%  { transform: rotate(2deg) translate(1px, -1px); }
+  70%  { transform: rotate(-3deg) translate(-2px, 2px); }
+  80%  { transform: rotate(3deg) translate(2px, -2px); }
+  90%  { transform: rotate(-1deg) translate(-1px, 1px); }
+  100% { transform: rotate(0deg) translate(0, 0); }
+}
+
+@keyframes yesPulse {
+  0%   { box-shadow: 0 0 10px rgba(255,77,136,0.4); }
+  50%  { box-shadow: 0 0 25px rgba(255,77,136,0.8); }
+  100% { box-shadow: 0 0 10px rgba(255,77,136,0.4); }
+}
+
+@keyframes heartBeat {
+  0%   { transform: scale(1); }
+  20%  { transform: scale(1.1); }
+  40%  { transform: scale(1); }
+  60%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+
+/* Bounce up and down */
+@keyframes yesBounce {
+  0%   { transform: translateY(0) scale(1); }
+  15%  { transform: translateY(-3px) scale(1.05); }
+  30%  { transform: translateY(3px) scale(0.95); }
+  45%  { transform: translateY(-2px) scale(1.03); }
+  60%  { transform: translateY(2px) scale(0.97); }
+  75%  { transform: translateY(-1px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* Small left-right wiggle */
+@keyframes yesWiggle {
+  0%   { transform: translateX(0) rotate(0deg); }
+  15%  { transform: translateX(-2px) rotate(-1deg); }
+  30%  { transform: translateX(2px) rotate(1deg); }
+  45%  { transform: translateX(-2px) rotate(-1deg); }
+  60%  { transform: translateX(2px) rotate(1deg); }
+  75%  { transform: translateX(-1px) rotate(-0.5deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+/* Optional: extra hover pop/glow */
+#yes:hover {
+  transform: scale(1.12);
+  box-shadow: 0 8px 20px rgba(255,77,136,0.7), 0 0 20px rgba(255,77,136,0.4);
+}
+
+
+#no {
+  background: #f0f0f0;
+  color: #333;
+  cursor: default;
+  user-select: none;
+  position: fixed;
+  border: 2px solid #ffccd9;
+  box-shadow: 0 4px 12px rgba(255,200,220,0.3);
+}
+
+/* ===== POOF ANIMATION ===== */
+.poof {
+  animation: poof 0.5s ease-out forwards;
+  position: absolute;
+  pointer-events: none;
+}
+
+@keyframes poof {
+  0% { transform: scale(1) rotate(0deg); opacity: 1; filter: blur(0); }
+  100% { transform: scale(1.8) rotate(15deg); opacity: 0; filter: blur(6px); }
+}
+
+/* ===== FLOATING FLOWERS / SPARKLES ===== */
+.flower, .sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  animation-name: floatUpLoop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUpLoop {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-50vh) rotate(15deg) scale(1.05); }
+  100% { transform: translateY(-100vh) rotate(-10deg) scale(1); }
+}
+
+/* ===== LETTER POPUP ===== */
+.letter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,200,220,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 1000;
+}
+
+.letter.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.letter-envelope {
+  background: #fff0f6;
+  border-radius: 20px;
+  border: 2px solid #ffccd9;
+  padding: 30px 40px;
+  box-shadow: 0 10px 25px rgba(255,77,136,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: pop 0.6s ease-out forwards;
+  cursor: pointer;
+}
+
+.letter-text p {
+  margin: 8px 0;
+  color: #ff4d88;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.letter-tip {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #ff77aa;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.2) rotate(-20deg); opacity: 0; }
+  70% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes blink {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* ===== LETTER WIGGLE ANIMATION ===== */
+@keyframes wiggle {
+  0%   { transform: translateX(0) rotate(0deg); }
+  15%  { transform: translateX(-3px) rotate(-1deg); }
+  30%  { transform: translateX(3px) rotate(1deg); }
+  45%  { transform: translateX(-3px) rotate(-1deg); }
+  60%  { transform: translateX(3px) rotate(1deg); }
+  75%  { transform: translateX(-2px) rotate(-0.5deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+.letter-envelope {
+  background: #fff0f6;
+  border-radius: 20px;
+  border: 2px solid #ffccd9;
+  padding: 30px 40px;
+  box-shadow: 0 10px 25px rgba(255,77,136,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: pop 0.6s ease-out forwards;
+
+  /* Add wiggle animation */
+  animation: pop 0.6s ease-out forwards, wiggle 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+/* Letter text container styling */
+.letter-text p {
+  margin: 8px 0;
+  color: #ff4d88;
+  font-size: 16px;          /* you can reduce slightly if still too big, e.g., 15px */
+  line-height: 1.4;         /* spacing between lines */
+  text-align: center;
+  max-width: 550px;         /* limits the width so it doesn’t stretch too wide */
+  word-wrap: break-word;    /* ensures long words break nicely */
+}
+
+/* ===== NO BUTTON TAUNT TEXT ===== */
+.no-taunt {
+  position: fixed;
+  font-size: 40px;
+  font-weight: bold;
+  color: #b266ff;
+  text-shadow: 0 0 12px rgba(178,102,255,0.6);
+  pointer-events: none;
+  opacity: 0;
+  animation: tauntFloat 4.5s ease-out forwards;
+  z-index: 999;
+}
+
+@keyframes tauntFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.05);
+  }
+}
