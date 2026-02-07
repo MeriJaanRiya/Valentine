@@ -127,9 +127,10 @@ function initializeButtons() {
   </div>
   
   <div class="celebrate-photo-wrapper">
-    <video src="https://i.imgur.com/DqCK6oq.mp4" alt="Photo 2" class="celebrate-photo">
-    <div class="celebrate-photo-caption">Here is proof that this is my gift hehe 🤭</div>
-  </div>
+    <video class="celebrate-photo" width="320" height="240" controls autoplay muted loop>
+  <source src="https://i.imgur.com/DqCK6oq.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 </div>
 
 
