@@ -354,3 +354,45 @@ button:hover {
     transform: translateY(-40px) scale(1.05);
   }
 }
+
+.celebrate-photos {
+  display: flex;
+  gap: 20px;              /* space between the images */
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.celebrate-photo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* center caption under image */
+}
+
+.celebrate-photo-text {
+  font-size: 1.2em;       /* adjust size */
+  color: #ff4d88;
+  text-align: center;
+  margin-top: 8px;        /* space between image and text */
+  font-style: italic;     /* optional */
+}
+
+.celebrate-photos {
+  display: flex;
+  gap: 20px;               /* space between the two image stacks */
+  justify-content: center;  /* center the whole row */
+  margin: 20px 0;
+}
+
+.celebrate-photo-wrapper {
+  display: flex;
+  flex-direction: column;  /* stack image and caption vertically */
+  align-items: center;     /* center the caption under the image */
+}
+
+.celebrate-photo-caption {
+  font-size: 1.2em;
+  color: #ff4d88;
+  text-align: center;
+  margin-top: 8px;         /* spacing between image and caption */
+  font-style: italic;      /* optional */
+}
